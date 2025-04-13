@@ -1,0 +1,75 @@
+{
+  "burgers": [
+    {
+      "id": 1,
+      "title": "Classic Beef Burger",
+      "description": "A juicy beef patty with lettuce, tomato, onion, and our special sauce on a toasted sesame seed bun.",
+      "image": "classicbeefburger.jpg",
+      "price": 8.99,
+      "limitedEdition": false
+    },
+    {
+      "id": 2,
+      "title": "Cheeseburger Deluxe",
+      "description": "Our classic beef burger topped with melted cheddar cheese, crispy bacon, and pickles.",
+      "image": "cheeseburgerdeluxe.jpg",
+      "price": 9.99,
+      "limitedEdition": false
+    },
+    {
+      "id": 3,
+      "title": "The Veggie Delight",
+      "description": "A plant-based patty with avocado, sprouts, cucumber, and a vegan aioli on a whole wheat bun.",
+      "image": "veggiedelightburger.jpg",
+      "price": 9.49,
+      "limitedEdition": false
+    },
+    {
+      "id": 4,
+      "title": "Chicken Stack Burger",
+      "description": "Grilled chicken breast glazed with burger sauce.",
+      "image": "chickenburger.jpg",
+      "price": 10.79,
+      "limitedEdition": false
+    },
+    {
+      "id": 5,
+      "title": "The 'El Jefe' Burger",
+      "description": "Chorizo and beef patty, Oaxaca cheese, pickled onions, chipotle mayo, on a brioche bun. ¡Muy delicioso!",
+      "image": "eljefeburger.jpg",
+      "price": 13.99,
+      "limitedEdition": true
+    },
+    {
+      "id": 6,
+      "title": "The Oktoberfest Burger",
+      "description": "Beef patty, bratwurst, sauerkraut, Swiss cheese, and mustard on a pretzel bun. Our burger in celebration of Oktoberfest",
+      "image": "pretzelburger.jpg",
+      "price": 14.99,
+      "limitedEdition": true
+    }
+  ],
+  "sides": [
+    {
+      "title": "Fries",
+      "description": "Crispy golden potato fries, seasoned with sea salt.",
+      "image": "fries.jpg",
+      "price": 3.99,
+      "limitedEdition": false
+    },
+    {
+      "title": "Halloumi Fries",
+      "description": "Crispy fried halloumi sticks, served with a sweet chili dip.",
+      "image": "halloumifries.jpg",
+      "price": 6.99,
+      "limitedEdition": false
+    },
+    {
+      "title": "Potato Smiles",
+      "description": "Fun and crispy potato smiles, perfect for kids and adults alike.",
+      "image": "potatosmiles.jpg",
+      "price": 4.49,
+      "limitedEdition": false
+    }
+  ]
+}
