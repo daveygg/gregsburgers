@@ -1,11 +1,11 @@
 import { createRootRoute, Outlet } from "@tanstack/react-router";
-import TopMenuBar from "../features/menuBar/TopMenuBar";
+import Navbar from "../features/navbar/Navbar";
 
 export const Route = createRootRoute({
   component: () => (
     <>
       <div className="bg-gray-100 w-full h-full flex flex-col" >
-        <TopMenuBar/>
+        <Navbar/>
         <Outlet />
       </div>
     </>

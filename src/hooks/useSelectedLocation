@@ -1,0 +1,11 @@
+import { create } from 'zustand';
+
+interface SelectedLocationState {
+  selectedLocation: string;
+  setSelectedLocation: (location: string) => void;
+}
+
+export const useSelectedLocation = create<SelectedLocationState>((set) => ({
+  selectedLocation: '',
+  setSelectedLocation: (location) => set({ selectedLocation: location }),
+}));

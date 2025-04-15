@@ -3,7 +3,7 @@ import logo from "../../assets/icons/burger.svg";
 import arrow from "../../assets/icons/right-arrow.svg";
 import { Button } from "@/components/ui/button";
 
-export default function TopMenuBar() {
+export default function Navbar() {
   return (
     <div className="grid grid-cols-[auto_1fr] items-center py-3 mb-2 bg-white border-b  border-gray-200 w-full">
       <div className="flex flex-grow-1 items-center px-4">

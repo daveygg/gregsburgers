@@ -67,8 +67,34 @@
     {
       "title": "Potato Smiles",
       "description": "Fun and crispy potato smiles, perfect for kids and adults alike.",
-      "image": "potatosmiles.jpg",
+      "image": "potatosmilies.jpg",
       "price": 4.49,
+      "limitedEdition": true
+    }
+  ],
+"drinks": [
+    {
+      "id": 10,
+      "title": "Coke",
+      "description": "Classic Coca-Cola.",
+      "image": "coke.jpg",
+      "price": 2.50,
+      "limitedEdition": false
+    },
+    {
+      "id": 11,
+      "title": "Sprite",
+      "description": "Refreshing lemon-lime soda.",
+      "image": "sprite.jpg",
+      "price": 2.50,
+      "limitedEdition": false
+    },
+    {
+      "id": 12,
+      "title": "Fanta",
+      "description": "Orange-flavored soda.",
+      "image": "fanta.jpg",
+      "price": 2.50,
       "limitedEdition": false
     }
   ]

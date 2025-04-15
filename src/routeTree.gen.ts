@@ -11,41 +11,41 @@
 // Import Routes
 
 import { Route as rootRoute } from './routes/__root'
-import { Route as MenuImport } from './routes/menu'
-import { Route as LocationsImport } from './routes/locations'
-import { Route as ContactImport } from './routes/contact'
-import { Route as AboutImport } from './routes/about'
 import { Route as IndexImport } from './routes/index'
+import { Route as MenuIndexImport } from './routes/menu/index'
+import { Route as LocationsIndexImport } from './routes/locations/index'
+import { Route as ContactIndexImport } from './routes/contact/index'
+import { Route as AboutIndexImport } from './routes/about/index'
 
 // Create/Update Routes
-
-const MenuRoute = MenuImport.update({
-  id: '/menu',
-  path: '/menu',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const LocationsRoute = LocationsImport.update({
-  id: '/locations',
-  path: '/locations',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const ContactRoute = ContactImport.update({
-  id: '/contact',
-  path: '/contact',
-  getParentRoute: () => rootRoute,
-} as any)
-
-const AboutRoute = AboutImport.update({
-  id: '/about',
-  path: '/about',
-  getParentRoute: () => rootRoute,
-} as any)
 
 const IndexRoute = IndexImport.update({
   id: '/',
   path: '/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const MenuIndexRoute = MenuIndexImport.update({
+  id: '/menu/',
+  path: '/menu/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const LocationsIndexRoute = LocationsIndexImport.update({
+  id: '/locations/',
+  path: '/locations/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const ContactIndexRoute = ContactIndexImport.update({
+  id: '/contact/',
+  path: '/contact/',
+  getParentRoute: () => rootRoute,
+} as any)
+
+const AboutIndexRoute = AboutIndexImport.update({
+  id: '/about/',
+  path: '/about/',
   getParentRoute: () => rootRoute,
 } as any)
 
@@ -60,32 +60,32 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexImport
       parentRoute: typeof rootRoute
     }
-    '/about': {
-      id: '/about'
+    '/about/': {
+      id: '/about/'
       path: '/about'
       fullPath: '/about'
-      preLoaderRoute: typeof AboutImport
+      preLoaderRoute: typeof AboutIndexImport
       parentRoute: typeof rootRoute
     }
-    '/contact': {
-      id: '/contact'
+    '/contact/': {
+      id: '/contact/'
       path: '/contact'
       fullPath: '/contact'
-      preLoaderRoute: typeof ContactImport
+      preLoaderRoute: typeof ContactIndexImport
       parentRoute: typeof rootRoute
     }
-    '/locations': {
-      id: '/locations'
+    '/locations/': {
+      id: '/locations/'
       path: '/locations'
       fullPath: '/locations'
-      preLoaderRoute: typeof LocationsImport
+      preLoaderRoute: typeof LocationsIndexImport
       parentRoute: typeof rootRoute
     }
-    '/menu': {
-      id: '/menu'
+    '/menu/': {
+      id: '/menu/'
       path: '/menu'
       fullPath: '/menu'
-      preLoaderRoute: typeof MenuImport
+      preLoaderRoute: typeof MenuIndexImport
       parentRoute: typeof rootRoute
     }
   }
@@ -95,27 +95,27 @@ declare module '@tanstack/react-router' {
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/contact': typeof ContactRoute
-  '/locations': typeof LocationsRoute
-  '/menu': typeof MenuRoute
+  '/about': typeof AboutIndexRoute
+  '/contact': typeof ContactIndexRoute
+  '/locations': typeof LocationsIndexRoute
+  '/menu': typeof MenuIndexRoute
 }
 
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/contact': typeof ContactRoute
-  '/locations': typeof LocationsRoute
-  '/menu': typeof MenuRoute
+  '/about': typeof AboutIndexRoute
+  '/contact': typeof ContactIndexRoute
+  '/locations': typeof LocationsIndexRoute
+  '/menu': typeof MenuIndexRoute
 }
 
 export interface FileRoutesById {
   __root__: typeof rootRoute
   '/': typeof IndexRoute
-  '/about': typeof AboutRoute
-  '/contact': typeof ContactRoute
-  '/locations': typeof LocationsRoute
-  '/menu': typeof MenuRoute
+  '/about/': typeof AboutIndexRoute
+  '/contact/': typeof ContactIndexRoute
+  '/locations/': typeof LocationsIndexRoute
+  '/menu/': typeof MenuIndexRoute
 }
 
 export interface FileRouteTypes {
@@ -123,24 +123,24 @@ export interface FileRouteTypes {
   fullPaths: '/' | '/about' | '/contact' | '/locations' | '/menu'
   fileRoutesByTo: FileRoutesByTo
   to: '/' | '/about' | '/contact' | '/locations' | '/menu'
-  id: '__root__' | '/' | '/about' | '/contact' | '/locations' | '/menu'
+  id: '__root__' | '/' | '/about/' | '/contact/' | '/locations/' | '/menu/'
   fileRoutesById: FileRoutesById
 }
 
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  AboutRoute: typeof AboutRoute
-  ContactRoute: typeof ContactRoute
-  LocationsRoute: typeof LocationsRoute
-  MenuRoute: typeof MenuRoute
+  AboutIndexRoute: typeof AboutIndexRoute
+  ContactIndexRoute: typeof ContactIndexRoute
+  LocationsIndexRoute: typeof LocationsIndexRoute
+  MenuIndexRoute: typeof MenuIndexRoute
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  AboutRoute: AboutRoute,
-  ContactRoute: ContactRoute,
-  LocationsRoute: LocationsRoute,
-  MenuRoute: MenuRoute,
+  AboutIndexRoute: AboutIndexRoute,
+  ContactIndexRoute: ContactIndexRoute,
+  LocationsIndexRoute: LocationsIndexRoute,
+  MenuIndexRoute: MenuIndexRoute,
 }
 
 export const routeTree = rootRoute
@@ -154,26 +154,26 @@ export const routeTree = rootRoute
       "filePath": "__root.tsx",
       "children": [
         "/",
-        "/about",
-        "/contact",
-        "/locations",
-        "/menu"
+        "/about/",
+        "/contact/",
+        "/locations/",
+        "/menu/"
       ]
     },
     "/": {
       "filePath": "index.tsx"
     },
-    "/about": {
-      "filePath": "about.tsx"
+    "/about/": {
+      "filePath": "about/index.tsx"
     },
-    "/contact": {
-      "filePath": "contact.tsx"
+    "/contact/": {
+      "filePath": "contact/index.tsx"
     },
-    "/locations": {
-      "filePath": "locations.tsx"
+    "/locations/": {
+      "filePath": "locations/index.tsx"
     },
-    "/menu": {
-      "filePath": "menu.tsx"
+    "/menu/": {
+      "filePath": "menu/index.tsx"
     }
   }
 }
